@@ -1,0 +1,285 @@
+                                    /* HEADER */
+#header {
+    min-height: 60px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+                                    /* HEADER-LEFT */
+#header .left {
+    display: flex;
+    align-items: center;
+}
+
+#header .left .menu-icon {
+    width: 25px;
+}
+
+#header .yt-icon {
+    width: 35px;
+    margin-left: 20px;
+}
+
+#header .left .header-title {
+    font-size: 20px;
+}
+
+#header .left .header-ph {
+    font-size: 10px;
+    font-weight: 400;
+    color: gray;
+}
+
+                                    /* HEADER-MID */
+#header .mid {
+    flex: 1;
+    max-width: 600px;
+}
+
+#header .mid .form-search {
+    display: flex;
+}
+
+#header .mid .form-input {
+    min-height: 40px;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 1px 1px 1px rgb(218, 218, 218) inset;
+    border-radius: 2px;
+    flex: 1;
+    padding-left: 5px;
+    width: 0;
+    outline: none;
+}
+
+#header .mid .form-input::placeholder {
+    font-size: 17px;
+}
+
+#header .mid .form-input:focus {
+    border: 1px solid rgb(170, 170, 170);
+}
+
+#header .mid .search-btn {
+    border: 1px solid rgb(218, 218, 218);
+    background-color: rgb(240, 240, 240);
+    margin-left: -1px;
+    border-left: none;
+    padding: 3px 20px 0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    position: relative;
+}
+
+#header .mid .search-btn:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 7px 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+#header .mid .mic-btn {
+    margin-left: 10px;
+    padding: 5px 9px 0;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#header .mid .mic-btn:hover .tooltip {
+    opacity: 1;
+}
+
+                                    /* HEADER-RIGHT */
+#header .right {
+    display: flex;
+    gap: 30px;
+}
+
+#header .right img {
+    width: 24px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.notif-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.notif-num {
+    position: absolute;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+}
+
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+}
+
+
+                                    /* SIDEBAR */
+#sidebar{
+    min-height: calc(100vh - 60px);
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    z-index: 100;
+    background-color: white;
+}
+
+#sidebar .sidebar-div1,
+#sidebar .sidebar-div2 {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding-bottom: 10px;
+}
+
+#sidebar .sidebar-link-active {
+    display: flex;
+    padding: 10px 0 10px 30px;
+    align-items: center;
+    background-color: rgb(223, 223, 223);
+}
+
+#sidebar .icon {
+    margin-right: 20px;
+    width: 24px;
+}
+
+#sidebar .title {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#sidebar .sidebar-link {
+    display: flex;
+    padding: 10px 0 10px 30px;
+    align-items: center;
+}
+
+                                        /* NAV */
+#nav {
+    position: fixed;
+    z-index: -1;
+    top: 60px;
+    left: 250px;
+    right: 0;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 25px;
+    background-color: white;
+}
+
+#nav button {
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid rgb(231, 231, 231);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#nav .active {
+    background-color: black;
+    color: white;
+}
+
+                                        /* MAIN */
+#video-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(auto, 300px) );
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(245, 244, 244);
+}
+
+.video {
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.video-profile {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius:25px;
+}
+
+.profile-desc {
+    padding-top: 5px;
+}
+
+.profile-desc-title {
+    padding-bottom: 10px;
+}
+
+.profile-desc-uploader {
+    font-size: 14px;
+    color: gray;
+}
+
+.profile-desc-views {
+    font-size: 14px;
+    color: gray;
+}
+
+.video-img {
+    width: 100%; /* or any custom size */
+    height: 200px; 
+    object-fit: cover;
+}
+
+.video-img-container {
+    position: relative;
+}
+
+.vid-num {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    bottom: 8px;
+    right: 5px;
+}
